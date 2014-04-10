@@ -8,8 +8,6 @@
   "main": "style.css",
   "dependencies": {
     "bootstrap-sass": "~3.0.1",
-    "grunt-contrib-sass": "~0.4.0",
-    "coffee-script": "~1.7.0",
     "modernizr": "~2.6.2",
     "jquery": "~1.10.2"
   },
