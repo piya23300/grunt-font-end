@@ -1,0 +1,65 @@
+{
+  "name": "grunt-font-end",
+  "description": "collection tools for font-end developer",
+  "version": "0.1.0",
+  "homepage": "https://github.com/piya23300/grunt-font-end",
+  "author": "PiYa (https://github.com/piya23300)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piya23300/grunt-font-end.git"
+  },
+  "bugs": {
+    "url": "https://github.com/piya23300/grunt-font-end/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/piya23300/grunt-font-end/blob/master/LICENSE"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "dargs": "~0.1.0"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-nodeunit": "latest",
+    "grunt-contrib-internal": "latest",
+    "jshint-stylish": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-mkdir": "latest",
+    "grunt-contrib-coffee": "latest",
+    "grunt-coffeelint": "latest"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "scss",
+    "sass",
+    "css",
+    "compile",
+    "preprocessor",
+    "coffee",
+    "js",
+    "style"
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "license": "MIT"
+}

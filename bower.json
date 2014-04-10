@@ -1,0 +1,24 @@
+{
+  "name": "study-bower",
+  "version": "0.0.1",
+  "authors": [
+    "PiYa <piya23300@gmail.com>"
+  ],
+  "description": "test bower",
+  "main": "style.css",
+  "dependencies": {
+    "bootstrap-sass": "~3.0.1",
+    "grunt-contrib-sass": "~0.4.0",
+    "coffee-script": "~1.7.0",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
