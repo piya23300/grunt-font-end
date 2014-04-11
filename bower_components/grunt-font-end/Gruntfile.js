@@ -17,6 +17,7 @@ module.exports = function (grunt) {
         js: '../../src/js',
         coffee: '../../src/js/coffee',
         sass: '../../src/css/sass',
+        scss: '../../src/css/scss',
       },
       pro: {
         css: '../../css',
@@ -36,6 +37,7 @@ module.exports = function (grunt) {
           '<%= path_file.dev.css %>', '<%= path_file.pro.css %>', 
           '<%= path_file.dev.js %>', '<%= path_file.pro.js %>',
           '<%= path_file.dev.sass %>',
+          '<%= path_file.dev.scss %>',
           '<%= path_file.dev.coffee %>'
           ]
         }
@@ -94,6 +96,19 @@ module.exports = function (grunt) {
         }
       }
     },
+    //scss
+    sass: {                  // Task
+      dist: {
+        files: [{
+          expand: true,
+          flatten: true,
+          cwd: '<%= path_file.dev.css %>',
+          src: ['<%= path_file.dev.scss %>/*.scss'],
+          dest: '<%= path_file.dev.css %>',
+          ext: '.css'
+        }]                   // Target
+      }
+    },
     // configure cssmin to minify css files ------------------------------------
     cssmin: {
       options: {
@@ -132,6 +147,10 @@ module.exports = function (grunt) {
       compass: {
         files: ['<%= path_file.dev.sass %>/*.sass'],
         tasks: ['compass']
+      },
+      sass: {
+        files: ['<%= path_file.dev.scss %>/*.scss'],
+        tasks: ['sass']
       },
 
       // for scripts, run jshint and uglify
@@ -181,6 +200,8 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-sass');
+
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
@@ -195,9 +216,9 @@ module.exports = function (grunt) {
 
 
   // grunt.registerTask('mkdir', grunt.file.mkdir);
-  grunt.registerTask('default', ['mkdir', 'imagemin', 'watch']);
+  grunt.registerTask('default', ['mkdir', 'imagemin']);
   grunt.registerTask('dev', [
     'coffeelint', 'coffee', 'jshint', 'uglify', 
-    'compass', 'cssmin',
+    'compass', 'sass', 'cssmin',
     'imagemin' ]);
 };

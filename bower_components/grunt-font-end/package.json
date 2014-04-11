@@ -41,6 +41,7 @@
     "grunt-coffeelint": "latest",
 
     "grunt-contrib-compass": "latest",
+    "grunt-sass": "latest",
     "grunt-contrib-cssmin": "latest",
 
     "grunt-contrib-imagemin": "latest",

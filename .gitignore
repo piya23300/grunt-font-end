@@ -1,7 +1,8 @@
 
-src/css/*
-src/js/*.js
-src/js/coffee/*.coffee
-css/*.css
+src/*
+css/*
 img/*
-js/*.js
+js/*
+font/*
+*.html
+.DS_Store
